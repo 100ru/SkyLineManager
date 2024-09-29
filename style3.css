@@ -1,0 +1,146 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered horizontally */
+  padding: 20px;
+  background-image: url('images/travel1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 30%;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px; /* Added space below header */
+}
+
+.container .form {
+  margin-top: 30px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label {
+  color: #333;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 40px; /* Increased height for better touch targets */
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.input-box input:focus {
+  box-shadow: 0 0 5px rgba(130, 106, 251, 0.5); /* Subtle glow on focus */
+  border-color: rgb(130, 106, 251); /* Change border color on focus */
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ddd; /* Added border for consistency */
+  color: #707070;
+  font-size: 1rem;
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.select-box select:hover {
+  background: rgba(130, 106, 251, 0.1); /* Change background on hover */
+}
+
+.form button {
+  height: 45px; /* Increased button height */
+  width: 100%;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px; /* Increased margin for better spacing */
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  background: rgb(130, 106, 251);
+}
+
+.form button:hover {
+  background: rgb(88, 56, 250);
+  transform: translateY(-2px); /* Lift button effect */
+}
+
+.form button:active {
+  transform: translateY(0); /* Reset position on click */
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+
+  .container {
+    width: 90%; /* Full width on small screens */
+  }
+}
+
+.form button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}

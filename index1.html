@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    
+    <section class="container">
+      <header>Passenger Form</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>p_id</label>
+          <input type="number" placeholder="Enter Passenger id" required />
+        </div>
+
+        <div class="input-box">
+          <label>p_name</label>
+          <input type="text" placeholder="Enter Name" required />
+        </div>
+        <div class="gender-box">
+          <h3>p_gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">other</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>p_city</label>
+            <input type="text" placeholder="Enter your city" required />
+          </div>
+        <button>Submit</button>
+        <button><a href="index.html">Back</button></a>  
+      </form>
+    </section>
+    
+  </body>
+</html>
